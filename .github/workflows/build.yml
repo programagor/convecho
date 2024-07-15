@@ -28,7 +28,7 @@ jobs:
 
     - name: Build executable with PyInstaller
       run: |
-        pyinstaller --onefile --windowed convecho.py
+        pyinstaller --windowed convecho.py
       env:
         PATH: /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 
@@ -36,4 +36,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: macos-executable
-        path: dist/convecho
+        path: dist/convecho.app
